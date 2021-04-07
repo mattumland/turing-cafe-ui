@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3001/api/v1/reservation')
+    fetch('http://localhost:3001/api/v1/reservations')
     .then(response => response.json())
     .then(resies => this.setState({ resLog: resies}))
   }
