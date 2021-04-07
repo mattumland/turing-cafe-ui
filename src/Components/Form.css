@@ -1,13 +1,13 @@
-.resForm {
+.res-form {
   margin-bottom: 25px;
   display: flex;
 }
 
-.inputBox {
+.input-box {
   margin: 0 15px 0 15px;
 }
 
-.inputButton {
+.input-button {
   margin: 0 15px 0 15px;
   padding: 0 15px 0 15px;
   border: 1px solid white;

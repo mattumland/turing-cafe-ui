@@ -23,8 +23,11 @@ describe('Page load tests', () => {
   });
 
   it('Should display a form to add a reservation', () => {
-    // cy.
-    //   get
+    cy
+      .get('input')
+      .should(($input) => {
+        expect($input).to.have.length(4)
+      })
   })
 
 })
