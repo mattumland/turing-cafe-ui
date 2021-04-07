@@ -37,7 +37,7 @@ class Form extends Component {
   render() {
     return(
       <form className='res-form'>
-        <input className='input-box'
+        <input className='input-box' data-cy='name-input'
           type='text'
           placeholder='Name'
           name='name'

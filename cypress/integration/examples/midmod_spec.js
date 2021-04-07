@@ -32,6 +32,29 @@ describe('Page load tests', () => {
 
 })
 
+describe('Form input tests', () => {
+
+  beforeEach(() => {
+    cy.visit('http://localhost:3000')
+  });
+
+  it('Should update the form value following user input', () => {
+    cy
+      .get('[name="name"]').type('Hail Satan')
+      .get('[value="Hail Satan"]')
+    cy
+      .get('[name="date"]').type('4/5')
+      .get('[value="4/5"]')
+    cy
+      .get('[name="time"]').type('7:00')
+      .get('[value="7:00"]')
+    cy
+      .get('[name="number"]').type('666')
+      .get('[value="666"]')
+  })
+
+});
+
 
 /*
 Write tests covering what should be displayed on the page when the user first visits.
