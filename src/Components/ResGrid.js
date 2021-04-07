@@ -1,5 +1,6 @@
 import React from 'react';
-import Res from "./Res";
+import Res from './Res';
+import './ResGrid.css';
 
 const ResGrid = ({ resLog }) => {
 

@@ -6,7 +6,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      resLog: [{ id: 18907224, name: 'Christie', date: '8/8', time: '7:00', number: 3 }]
+      resLog: []
     }
   }
 
