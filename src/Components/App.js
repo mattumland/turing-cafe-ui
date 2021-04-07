@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
+import ResGrid from './ResGrid';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      resLog: [{ id: 18907224, name: 'Christie', date: '8/8', time: '7:00', number: 3 }]
+    }
+  }
+
+  componentDidMount() {
+    //get our data from API and set state
+  }
+
   render() {
     return (
       <div className="App">
@@ -10,7 +22,9 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          
+          <ResGrid
+            resLog={this.state.resLog}
+          />
         </div>
       </div>
     )

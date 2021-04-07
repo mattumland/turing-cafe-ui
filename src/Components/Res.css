@@ -1,0 +1,21 @@
+.resCard {
+  background-color: #ffffff;
+  border: 3px solid teal;
+  border-radius: 5px;
+  color: teal;
+  padding: 0 10px 10px 10px;
+  width: 205px;
+}
+
+h5 {
+  font-weight: normal;
+}
+
+button {
+  margin: 0 auto;
+  width: 75%;
+  background-color: teal;
+  color: white;
+  border: none;
+  padding: 5px 0 5px 0;
+}
