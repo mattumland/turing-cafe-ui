@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Form.css';
 
 class Form extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ class Form extends Component {
       name:'',
       date:'',
       time:'',
-      number:'' //this will need to get turned into a number
+      number:''
     }
   }
 
@@ -18,6 +19,7 @@ class Form extends Component {
   submitRes = event => {
     event.preventDefault();
     const newRes = {
+      id: Date.now(),
       name:this.state.name,
       date:this.state.date,
       time:this.state.time,
@@ -34,8 +36,8 @@ class Form extends Component {
 
   render() {
     return(
-      <form>
-        <input
+      <form className='resForm'>
+        <input className="inputBox"
           type='text'
           placeholder='Name'
           name='name'
@@ -43,7 +45,7 @@ class Form extends Component {
           onChange={event => this.handleChange(event)}
         />
 
-        <input
+        <input className="inputBox"
           type='text'
           placeholder='Date (mm/dd)'
           name='date'
@@ -51,7 +53,7 @@ class Form extends Component {
           onChange={event => this.handleChange(event)}
         />
 
-        <input
+        <input className="inputBox"
           type='text'
           placeholder='Time'
           name='time'
@@ -60,7 +62,7 @@ class Form extends Component {
         />
 
 
-        <input
+        <input className="inputBox"
           type='text'
           placeholder='Number of guests'
           name='number'
@@ -68,7 +70,7 @@ class Form extends Component {
           onChange={event => this.handleChange(event)}
         />
 
-        <button onClick={event => this.submitRes(event)}>Make Reservation</button>
+        <button className="inputButton" onClick={event => this.submitRes(event)}>Make Reservation</button>
       </form>
     )
   }
