@@ -17,12 +17,16 @@ class App extends Component {
     .then(resies => this.setState({ resLog: resies}))
   }
 
+  addRes = (newRes) => {
+    this.setState({ resLog: [...this.state.resLog, newRes]});
+  }
+
   render() {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-          <Form />
+          <Form addRes = {this.addRes} />
         </div>
         <div className='resy-container'>
           <ResGrid

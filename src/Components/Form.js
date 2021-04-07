@@ -1,19 +1,36 @@
 import React, { Component } from 'react';
 
 class Form extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state={
       name:'',
       date:'',
       time:'',
-      number:''
+      number:'' //this will need to get turned into a number
     }
   }
 
   handleChange = event => {
     this.setState({ [event.target.name]: event.target.value });
   }
+
+  submitRes = event => {
+    event.preventDefault();
+    const newRes = {
+      name:this.state.name,
+      date:this.state.date,
+      time:this.state.time,
+      number:parseInt(this.state.number)
+    }
+    this.props.addRes(newRes);
+    this.clearInputs();
+  }
+
+    clearInputs = () => {
+      this.setState({ name:'', date:'', time:'', number:'' })
+    }
+
 
   render() {
     return(
@@ -51,7 +68,7 @@ class Form extends Component {
           onChange={event => this.handleChange(event)}
         />
 
-        <button>Make Reservation</button>
+        <button onClick={event => this.submitRes(event)}>Make Reservation</button>
       </form>
     )
   }
