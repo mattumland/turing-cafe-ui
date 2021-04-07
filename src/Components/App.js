@@ -11,7 +11,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    //get our data from API and set state
+    fetch('http://localhost:3001/api/v1/reservation')
+    .then(response => response.json())
+    .then(resies => this.setState({ resLog: resies}))
   }
 
   render() {
